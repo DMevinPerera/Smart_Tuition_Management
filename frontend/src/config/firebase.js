@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage"; // Import the getStorage function
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCh_tvbcHNDt9P0mayim0FwFU9UF8nCARM",
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "smart-tuition-794cf.firebaseapp.com",
   projectId: "smart-tuition-794cf",
   storageBucket: "smart-tuition-794cf.appspot.com", // Corrected the storage bucket URL
