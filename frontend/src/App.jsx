@@ -7,14 +7,12 @@ import RegisterPage from "./components/RegisterPage";
 import AdminAddQuestionsPage from "./components/AdminAddQuestionsPage";
 import AdminQuestionsPage from "./components/AdminQuestionsPage";
 import UserQuestionsPage from "./components/UserQuestionsPage";
-import Header from "./components/Header"; // Import the Header component
 
 const App = () => {
   return (
     <Router>
-      {/* The Header should be inside the Router context */}
-      <Header />
       <Routes>
+        {/* Define your routes here */}
         <Route path="/" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/admin/add-questions" element={<AdminAddQuestionsPage />} />
