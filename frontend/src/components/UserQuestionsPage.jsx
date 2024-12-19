@@ -95,7 +95,7 @@ const UserQuestionsPage = () => {
 
   const submitQuizHandler = (isTimesUp = false) => {
     if (isTimesUp) {
-      swal("Quiz Submitted!", `You have completed the quiz: ${quizTitle}.`, "success");
+      // swal("Quiz Submitted!", `You have completed the quiz: ${quizTitle}.`, "success");
     } else {
       swal({
         title: "Are you sure?",
