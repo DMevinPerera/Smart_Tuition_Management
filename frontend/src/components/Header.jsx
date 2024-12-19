@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 
@@ -12,7 +11,7 @@ const Header = () => {
   const logoutHandler = () => {
     setIsLoggedIn(false);
     setUserName("Guest");
-    navigate("/login");
+    navigate("/login"); // Redirect to login page after logout
   };
 
   return (
@@ -26,10 +25,19 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav>
-              {/* Home Button */}
-              <LinkContainer to="/">
-                <Nav.Link className="logoutbutton">Log Out</Nav.Link>
-              </LinkContainer>
+              {/* Conditionally render based on login state */}
+              {isLoggedIn ? (
+                <>
+                  <Nav.Link className="username">{`Welcome, ${userName}`}</Nav.Link>
+                  <Nav.Link onClick={logoutHandler} className="logoutbutton logoutandloginbutton">
+                    Log Out
+                  </Nav.Link>
+                </>
+              ) : (
+                <Nav.Link onClick={() => navigate("/login")} className="loginbutton logoutandloginbutton">
+                  Log In
+                </Nav.Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

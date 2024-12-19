@@ -52,7 +52,7 @@
     transform: scale(1.05); /* Slight zoom effect */
   }
 
-  .logoutbutton {
+  .logoutandloginbutton {
     background-color: #ffc107; /* Orange background */
     color: #ffffff; /* White text */
     border: none; /* Remove default border */
@@ -68,7 +68,7 @@
   left: -10px; /* Moves it slightly to the left */
   }
   
-  .logoutbutton:hover {
+  .logoutandloginbutton:hover {
     background-color: #ffffff; /* Slightly darker orange on hover */
     transform: scale(1.05); /* Subtle zoom effect */
     color: #ffc107;
