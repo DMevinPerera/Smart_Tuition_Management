@@ -14,8 +14,8 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/admin/add-questions" element={<AdminAddQuestionsPage />} />
-        <Route path="/admin/questions" element={<AdminQuestionsPage />} />
-        <Route path="/" element={<UserQuestionsPage />} />
+        <Route path="/" element={<AdminQuestionsPage />} />
+        <Route path="/user/questions" element={<UserQuestionsPage />} />
       </Routes>
     </Router>
     );}
