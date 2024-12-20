@@ -111,7 +111,7 @@ const AdminAddQuestionsPage = () => {
         setOption4("");
         setAnswer(null);
 
-        navigate("/adminQuestions");
+        navigate("/admin/questions");
       } catch (error) {
         console.error("Error adding question: ", error);
         swal("Error", "Failed to add question. Please try again.", "error");
